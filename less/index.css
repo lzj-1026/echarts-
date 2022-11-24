@@ -23,28 +23,193 @@ body {
 }
 .box .main {
   display: flex;
+  flex: 3;
+  flex-direction: column;
+  /*边框样式及内容定位*/
+  /*故障检测*/
+  /*点位分布统计*/
+}
+.box .main .h {
+  height: 1.5rem;
 }
 .box .main .pre {
-  border: 1px solid;
-  border-width: 3rem 2rem 1.3rem 2rem;
+  border: 1px solid transparent;
+  border-width: 0.6375rem 0.575rem 0.3125rem 1.62rem;
   border-image-source: url(../img/border.png);
-  border-image-slice: 51 46 25 32;
+  border-image-slice: 51 46 25 129;
   position: relative;
+  margin-bottom: 5%;
 }
-.box .main:nth-of-type(1) {
-  flex: 3;
-}
-.box .main:nth-of-type(1) .m_b {
-  height: 1rem;
-}
-.box .main:nth-of-type(1) .m_b .con {
+.box .main .pre .con {
   position: absolute;
+  top: -0.6375rem;
+  right: -0.575rem;
+  bottom: -0.3125rem;
+  left: -1.62rem;
+  padding: 0.25rem 0.325rem;
+}
+.box .main .pre .con h3 {
+  font-size: 0.3rem;
+  font-weight: 600;
+}
+.box .main .pre .con ul {
+  display: flex;
+  justify-content: space-around;
+}
+.box .main .pre .con ul li h4 {
+  text-align: center;
+  font-size: 0.4rem;
+  color: white;
+  margin-bottom: 0.0625rem;
+}
+.box .main .pre .con ul li p {
+  font-size: 0.025rem;
+  color: #4c9bfd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.box .main .pre .con ul li p span {
+  display: block;
+  width: 0.0625rem;
+  height: 0.15rem;
+  margin-right: 0.125rem;
+  border-radius: 0.2rem;
+  background-color: #4c9bfd;
+}
+.box .main .pre .con ul li:nth-of-type(2) span {
+  background-color: #83caa6;
+}
+.box .main .pre .con ul li:nth-of-type(3) span {
+  background-color: #83caa6;
+}
+.box .main .pre .con ul li:nth-of-type(4) span {
+  background-color: #db4e3f;
+}
+.box .main .pre h3 {
+  font-size: 0.25rem;
+  color: white;
+  font-weight: 400;
 }
 .box .main:nth-of-type(2) {
   flex: 4;
-  background-color: aqua;
+  margin: 0 0.125rem;
+  background-color: #3f915c;
 }
 .box .main:nth-of-type(3) {
   flex: 3;
   background-color: red;
+}
+.box .main .jk {
+  height: 6rem;
+  padding: 1%;
+  /*检测栏*/
+  /*数据大屏*/
+}
+.box .main .jk h3 {
+  display: flex;
+  align-items: center;
+}
+.box .main .jk h3 a {
+  font-size: 20px;
+  color: #0d49c4;
+}
+.box .main .jk h3 .active {
+  color: white;
+}
+.box .main .jk h3 span {
+  display: block;
+  width: 0.0625rem;
+  height: 0.5rem;
+  background-color: #6feeef;
+  margin: 0.125rem;
+}
+.box .main .jk .g_z {
+  overflow: hidden;
+  /*数据滚动*/
+}
+.box .main .jk .g_z .r_s {
+  background-color: #1b3259;
+}
+.box .main .jk .g_z .row {
+  padding: 0;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  font-size: 0.2rem;
+  display: flex;
+}
+.box .main .jk .g_z .row .col {
+  color: #6feeef;
+  flex: 1;
+}
+.box .main .jk .g_z .row .col:nth-of-type(2) {
+  flex: 3;
+}
+.box .main .jk .g_z .row .col:nth-of-type(3) {
+  flex: 1;
+}
+.box .main .jk .g_z .roll {
+  overflow: hidden;
+  height: 4rem;
+}
+.box .main .jk .g_z .roll .yc {
+  animation: move linear 5s infinite;
+}
+.box .main .jk .g_z .roll .yc:hover {
+  animation-play-state: paused;
+}
+.box .main .jk .g_z .roll .yc .row:hover {
+  background-color: rgba(107, 184, 184, 0.3);
+}
+.box .main .jk .g_z .roll .yc .row .col {
+  color: #4c9bfd;
+}
+.box .main .f_b {
+  height: 5rem;
+}
+.box .main .f_b .fb {
+  display: flex;
+}
+.box .main .f_b .fb .left {
+  flex: 1.5;
+}
+.box .main .f_b .fb .right {
+  flex: 0.8;
+  padding: 0.4rem 0.3rem;
+  background-image: url(../img/rect.png);
+  background-size: cover;
+}
+.box .main .f_b .fb .right ul {
+  display: flex;
+  flex-direction: column;
+}
+.box .main .f_b .fb .right ul li {
+  height: 1.5rem;
+}
+.box .main .f_b .fb .right ul li p {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.4rem;
+  color: white;
+}
+.box .main .f_b .fb .right ul li p:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  color: #f8ab67;
+}
+.box .main .f_b .fb .right ul li p:nth-of-type(2) span {
+  display: block;
+  width: 0.11rem;
+  height: 0.2rem;
+  background-color: #de3c3c;
+}
+.box .main .f_b .fb .right ul li p .p_s {
+  background-color: #eacf19 !important;
+}
+@keyframes move {
+  100% {
+    transform: translateY(-40%);
+  }
 }
