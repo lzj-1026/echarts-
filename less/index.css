@@ -19,13 +19,14 @@ body {
   background-size: 100%;
   display: flex;
   justify-content: space-around;
-  /*内容*/
+  /*内容(左)*/
 }
 .box .main {
   display: flex;
   flex: 3;
   flex-direction: column;
   /*边框样式及内容定位*/
+  /*中间*/
   /*故障检测*/
   /*点位分布统计*/
 }
@@ -93,12 +94,173 @@ body {
 }
 .box .main:nth-of-type(2) {
   flex: 4;
-  margin: 0 0.125rem;
-  background-color: #3f915c;
+  margin: 0 0.3rem;
+  padding-top: 0.6rem;
+  display: flex;
+}
+.box .main:nth-of-type(2) h3 {
+  font-size: 0.25rem;
+  color: white;
+  font-weight: 400;
+  padding-left: 0.5rem;
+  background: url(../img/shebei.png) no-repeat;
+  background-size: 0.34rem;
+  margin-bottom: 0.25rem;
+}
+.box .main:nth-of-type(2) .fj {
+  flex: 1;
+  width: 100%;
+  height: 6.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.box .main:nth-of-type(2) .tj {
+  margin-top: 0.4rem;
+  height: 5rem;
+}
+.box .main:nth-of-type(2) .tj .tj_b h3 {
+  padding: 0;
+  background: url();
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb {
+  display: flex;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_a {
+  flex: 2;
+  height: 4rem;
+  width: 100%;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b {
+  flex: 0.8;
+  padding: 0.4rem 0.3rem;
+  background-image: url(../img/rect.png);
+  background-size: cover;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b ul {
+  display: flex;
+  flex-direction: column;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b ul li {
+  height: 1.5rem;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b ul li p {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.4rem;
+  color: white;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b ul li p:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  color: #f8ab67;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b ul li p:nth-of-type(2) span {
+  display: block;
+  width: 0.11rem;
+  height: 0.2rem;
+  background-color: #de3c3c;
+}
+.box .main:nth-of-type(2) .tj .tj_b .fb .b_b ul li p .p_s {
+  background-color: #eacf19 !important;
 }
 .box .main:nth-of-type(3) {
   flex: 3;
-  background-color: red;
+  /*订单量*/
+  /*销售额*/
+}
+.box .main:nth-of-type(3) .m_l .l_a {
+  height: 2rem;
+}
+.box .main:nth-of-type(3) .m_l .l_a h3 {
+  display: flex;
+  align-items: center;
+  font-size: 0.28rem;
+}
+.box .main:nth-of-type(3) .m_l .l_a h3 a {
+  display: block;
+  text-align: center;
+  width: 1.2rem;
+  font-weight: 100;
+  border-right: 0.025rem solid #6feeef;
+}
+.box .main:nth-of-type(3) .m_l .l_a h3 a:last-of-type {
+  border-right: none;
+}
+.box .main:nth-of-type(3) .m_l .l_a h3 .cu {
+  font-size: 0.32rem;
+  color: white;
+  font-weight: 900;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr {
+  padding-left: 0.125rem;
+  display: flex;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr .n_a {
+  flex: 1;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr .n_a h3 {
+  margin-top: 0.125rem;
+  color: white;
+  font-size: 0.35rem;
+  font-weight: 400;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr .n_a > .p_a {
+  font-size: 0.18rem;
+  margin-top: 0.0625rem;
+  color: #0d49c4;
+  display: flex;
+  align-items: center;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr .n_a > .p_a a {
+  color: #4c9bfd;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr .n_a > .p_a span {
+  display: block;
+  width: 0.05rem;
+  height: 0.2rem;
+  border-radius: 0.0625rem;
+  margin-right: 0.1rem;
+  background-color: #db4e3f;
+}
+.box .main:nth-of-type(3) .m_l .l_a .nr .n_a > .p_a .y {
+  background-color: #eacf19;
+}
+.box .main:nth-of-type(3) .xs {
+  height: 4rem;
+}
+.box .main:nth-of-type(3) .xs h3 {
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+.box .main:nth-of-type(3) .xs h3 span {
+  display: block;
+  flex: 1;
+  border-right: 2px solid #6feeef;
+}
+.box .main:nth-of-type(3) .xs h3 .tm {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 1.375rem;
+}
+.box .main:nth-of-type(3) .xs h3 .tm a {
+  font-size: 0.25rem;
+  font-weight: 100;
+  padding: 1%;
+}
+.box .main:nth-of-type(3) .xs h3 .tm .bg {
+  color: white;
+  background-color: #4c9bfd;
+}
+.box .main:nth-of-type(3) .xs .zx {
+  position: relative;
+}
+.box .main:nth-of-type(3) .xs .zx .dw {
+  position: absolute;
+  font-size: 0.2rem;
+  color: white;
 }
 .box .main .jk {
   height: 6rem;
@@ -111,10 +273,11 @@ body {
   align-items: center;
 }
 .box .main .jk h3 a {
-  font-size: 20px;
+  font-size: 0.25rem;
   color: #0d49c4;
 }
 .box .main .jk h3 .active {
+  font-size: 0.25rem;
   color: white;
 }
 .box .main .jk h3 span {
@@ -172,6 +335,7 @@ body {
 }
 .box .main .f_b .fb .left {
   flex: 1.5;
+  padding: 1%;
 }
 .box .main .f_b .fb .right {
   flex: 0.8;

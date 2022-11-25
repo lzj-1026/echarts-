@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-around;
 
-    /*内容*/
+    /*内容(左)*/
     .main {
         display: flex;
         flex: 3;
@@ -112,15 +112,219 @@ body {
             }
         }
 
+        /*中间*/
         &:nth-of-type(2) {
             flex: 4;
-            margin: 0 .125rem;
-            background-color: rgb(63, 145, 92);
+            margin: 0 0.3rem;
+            padding-top: .6rem;
+            display: flex;
+
+
+            h3 {
+                font-size: 0.25rem;
+                color: white;
+                font-weight: 400;
+                padding-left: .5rem;
+                background: url(../img/shebei.png) no-repeat;
+                background-size: .34rem;
+                margin-bottom: .25rem;
+            }
+
+            .fj {
+                flex: 1;
+                width: 100%;
+                height: 6.6rem;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .tj {
+                margin-top: 0.4rem;
+                height: 5rem;
+
+                .tj_b {
+
+                    h3 {
+                        padding: 0;
+                        background: url();
+
+                    }
+
+                    .fb {
+                        display: flex;
+
+                        .b_a {
+                            flex: 2;
+                            height: 4rem;
+                            width: 100%;
+                        }
+
+                        .b_b {
+                            flex: 0.8;
+                            padding: .4rem .3rem;
+                            background-image: url(../img/rect.png);
+                            background-size: cover;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+
+                                li {
+                                    height: 1.5rem;
+
+                                    p {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        font-size: .4rem;
+                                        color: white;
+
+                                        &:nth-of-type(2) {
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: center;
+                                            font-size: 16px;
+                                            color: rgb(248, 171, 103);
+
+                                            span {
+                                                display: block;
+                                                width: .11rem;
+                                                height: .2rem;
+                                                background-color: rgb(222, 60, 60);
+                                            }
+                                        }
+
+                                        .p_s {
+                                            background-color: rgb(234, 207, 25) !important;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &:nth-of-type(3) {
             flex: 3;
-            background-color: red;
+
+            /*订单量*/
+            .m_l {
+                .l_a {
+                    height: 2rem;
+
+                    h3 {
+                        display: flex;
+                        align-items: center;
+                        font-size: .28rem;
+
+                        a {
+                            display: block;
+                            text-align: center;
+                            width: 1.2rem;
+                            font-weight: 100;
+                            border-right: .025rem solid rgb(111, 238, 239);
+
+                            &:last-of-type {
+                                border-right: none;
+                            }
+                        }
+
+                        .cu {
+                            font-size: .32rem;
+                            color: white;
+                            font-weight: 900;
+                        }
+
+                    }
+
+                    .nr {
+                        padding-left: .125rem;
+                        display: flex;
+
+                        .n_a {
+                            flex: 1;
+
+                            h3 {
+                                margin-top: .125rem;
+                                color: white;
+                                font-size: .35rem;
+                                font-weight: 400;
+                            }
+
+                            &>.p_a {
+                                font-size: 0.18rem;
+                                margin-top: .0625rem;
+                                color: rgb(13, 73, 196);
+                                display: flex;
+                                align-items: center;
+
+                                a {
+                                    color: rgb(76, 155, 253);
+                                }
+
+                                span {
+                                    display: block;
+                                    width: .05rem;
+                                    height: .2rem;
+                                    border-radius: .0625rem;
+                                    margin-right: .1rem;
+                                    background-color: rgb(219, 78, 63);
+                                }
+
+                                .y {
+                                    background-color: rgb(234, 207, 25);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*销售额*/
+            .xs {
+                height: 4rem;
+
+                h3 {
+                    display: flex;
+                    font-weight: 400;
+                    align-items: center;
+
+                    span {
+                        display: block;
+                        flex: 1;
+                        border-right: 2px solid rgb(111, 238, 239);
+                    }
+
+                    .tm {
+                        flex: 2;
+                        display: flex;
+                        justify-content: space-around;
+                        padding-right: 1.375rem;
+
+                        a {
+                            font-size: 0.25rem;
+                            font-weight: 100;
+                            padding: 1%;
+                        }
+
+                        .bg {
+                            color: white;
+                            background-color: rgb(76, 155, 253);
+                        }
+                    }
+                }
+
+                .zx {
+                    position: relative;
+
+                    .dw {
+                        position: absolute;
+                        font-size: .2rem;
+                        color: white;
+                    }
+                }
+            }
         }
 
         /*故障检测*/
@@ -134,11 +338,12 @@ body {
                 align-items: center;
 
                 a {
-                    font-size: 20px;
+                    font-size: .25rem;
                     color: rgb(13, 73, 196);
                 }
 
                 .active {
+                    font-size: .25rem;
                     color: white;
                 }
 
@@ -228,6 +433,7 @@ body {
 
                 .left {
                     flex: 1.5;
+                    padding: 1%;
                 }
 
                 .right {
@@ -275,13 +481,14 @@ body {
             }
         }
     }
-}
 
-@keyframes move {
-    0% {}
 
-    100% {
-        transform: translateY(-40%);
+    @keyframes move {
+        0% {}
+
+        100% {
+            transform: translateY(-40%);
+        }
+
     }
-
 }
