@@ -14,7 +14,7 @@ body {
   min-width: 1024px;
   margin: 0 auto;
   padding: 1%;
-  padding-top: 5%;
+  padding-top: 1rem;
   background: url(../img/logo.png) no-repeat;
   background-size: 100%;
   display: flex;
