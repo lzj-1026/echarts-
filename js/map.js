@@ -138,6 +138,33 @@ var YCData = [
     [{ name: '银川' }, { name: '上海', value: 100 }],
     [{ name: '银川' }, { name: '西安', value: 100 }],
     [{ name: '银川' }, { name: '西宁', value: 100 }],
+    [{ name: '银川' }, { name: '拉萨', value: 100 }],
+];
+var XMData = [
+    [{ name: '厦门' }, { name: '哈尔滨', value: 100 }],
+    [{ name: '厦门' }, { name: '北京', value: 100 }],
+    [{ name: '厦门' }, { name: '西安', value: 100 }],
+    [{ name: '厦门' }, { name: '广州', value: 100 }],
+
+];
+var LSData = [
+    [{ name: '拉萨' }, { name: '重庆', value: 100 }],
+    [{ name: '拉萨' }, { name: '北京', value: 100 }],
+    [{ name: '拉萨' }, { name: '深圳', value: 100 }],
+    [{ name: '拉萨' }, { name: '杭州', value: 100 }],
+    [{ name: '拉萨' }, { name: '上海', value: 100 }],
+    [{ name: '拉萨' }, { name: '郑州', value: 100 }],
+
+];
+var ZZData = [
+    [{ name: '郑州' }, { name: '重庆', value: 100 }],
+    [{ name: '郑州' }, { name: '北京', value: 100 }],
+    [{ name: '郑州' }, { name: '深圳', value: 100 }],
+    [{ name: '郑州' }, { name: '杭州', value: 100 }],
+    [{ name: '郑州' }, { name: '上海', value: 100 }],
+    [{ name: '郑州' }, { name: '拉萨', value: 100 }],
+    [{ name: '郑州' }, { name: '哈尔滨', value: 100 }],
+
 ];
 
 var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
@@ -164,9 +191,9 @@ var convertData = function (data) {
 
 };
 
-var color = ['#a6c84c', '#ffa022', '#46bee9'];//航线的颜色
+var color = ['#a6c84c', '#ffa022', '#46bee9', '#666', '#ccc', '#fff'];//航线的颜色
 var series = [];
-[['西安', XAData], ['西宁', XNData], ['银川', YCData]].forEach(function (item, i) {
+[['西安', XAData], ['西宁', XNData], ['银川', YCData], ['厦门', XMData], ['拉萨', LSData], ['郑州', ZZData]].forEach(function (item, i) {
     series.push({
         name: item[0] + ' Top3',
         type: 'lines',
