@@ -51,7 +51,7 @@ body {
 }
 .box .main .pre .con h3 {
   font-size: 0.3rem;
-  font-weight: 600;
+  font-weight: 100;
 }
 .box .main .pre .con ul {
   display: flex;
@@ -168,6 +168,7 @@ body {
   flex: 3;
   /*订单量*/
   /*销售额*/
+  /*雷达与进度*/
 }
 .box .main:nth-of-type(3) .m_l .l_a {
   height: 2rem;
@@ -227,7 +228,7 @@ body {
   background-color: #eacf19;
 }
 .box .main:nth-of-type(3) .xs {
-  height: 4rem;
+  height: 3rem;
 }
 .box .main:nth-of-type(3) .xs h3 {
   display: flex;
@@ -252,15 +253,86 @@ body {
 }
 .box .main:nth-of-type(3) .xs h3 .tm .bg {
   color: white;
+  font-weight: 400;
+  border-radius: 0.025rem;
   background-color: #4c9bfd;
 }
 .box .main:nth-of-type(3) .xs .zx {
   position: relative;
+  display: block;
+  width: 100%;
+  height: 3rem;
 }
 .box .main:nth-of-type(3) .xs .zx .dw {
   position: absolute;
   font-size: 0.2rem;
+  color: #4c9bfd;
+  left: 0.4rem;
+  top: 2%;
+}
+.box .main:nth-of-type(3) .xs .zx .tu {
+  width: 100%;
+  height: 2rem;
+}
+.box .main:nth-of-type(3) .ll {
+  display: flex;
+  height: 3.6rem;
+  justify-content: space-between;
+}
+.box .main:nth-of-type(3) .ll .zb {
+  width: 54%;
+}
+.box .main:nth-of-type(3) .ll .zb .ld {
+  height: 2.8rem;
+}
+.box .main:nth-of-type(3) .ll .yb {
+  width: 44%;
+}
+.box .main:nth-of-type(3) .ll .yb h2 {
+  font-size: 0.5rem;
+  font-weight: 400;
   color: white;
+  margin-top: 0.25rem;
+  padding: 0.35rem 0;
+  text-align: center;
+}
+.box .main:nth-of-type(3) .ll .yb p {
+  font-size: 0.4rem;
+  color: white;
+}
+.box .main:nth-of-type(3) .ll .yb p span {
+  margin-right: 0.125rem;
+}
+.box .main:nth-of-type(3) .ll .yb p:nth-of-type(2) {
+  padding: 0.125rem 0;
+  display: flex;
+}
+.box .main:nth-of-type(3) .ll .yb p:nth-of-type(2) a {
+  width: 50%;
+  font-size: 0.2rem;
+  color: #4cfde2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.box .main:nth-of-type(3) .ll .yb p:nth-of-type(2) a span {
+  width: 0.05rem;
+  height: 0.125rem;
+  display: inline-block;
+  background-color: red;
+}
+.box .main:nth-of-type(3) .ll .yb p:nth-of-type(2) a:nth-of-type(2) span {
+  background-color: aqua;
+}
+.box .main:nth-of-type(3) .di {
+  height: 3.9rem;
+}
+.box .main:nth-of-type(3) .di .water {
+  height: 3rem;
+}
+.box .main:nth-of-type(3) .di .right {
+  height: 2.9rem;
+  width: 30%;
 }
 .box .main .jk {
   height: 6rem;

@@ -197,7 +197,6 @@ for (var i = 0; i < ad.length; i++) {
 
         }
     }
-    // 自动切换
     function show() {
         timer = setInterval(function () {
             index++;
@@ -209,10 +208,6 @@ for (var i = 0; i < ad.length; i++) {
 
     }
     show();
-
-    // 鼠标来到订单框的时候  计时器停
-    // 鼠标移除的时候 计时器继续进行
-
     var l_a = document.querySelector('.l_a');
     l_a.onmouseenter = function () {
         clearInterval(timer);
@@ -242,70 +237,194 @@ for (var i = 0; i < ad.length; i++) {
             [32, 54, 34, 87, 32, 45, 62, 68, 93, 54, 54, 24]
         ]
     }
-    var myChart = echarts.init(document.querySelector('.tu'));
+    var my = echarts.init(document.querySelector('.tu'))
+    var option = {
+        color: ['rgb(0,245,244)', 'rgb(221,63,56)'],
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['预计销售额', '实际销售额'], orient: 'horizontal'
+            , textStyle: {
+                color: '#4c9bfd'
+            },
+            top: '1%'
+        },
+        grid: {
+            top: '20%',
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true,
+            show: true,
+            borderColor: 'rgb(9,63,103)'
+        },
 
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'], axisTick: {
+                show: false
+            },
+            axisLabel: {
+                color: '#4c9bfd'
+            },
+            axisLine: {
+                show: false
+            },
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                color: '#4c9bfd'
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgb(9,63,103)'
+                }
+            }
+        },
+        series: [
+            {
+                name: '预计销售额',
+                type: 'line',
+                stack: 'Total',
+                data: data.year[0],
+                smooth: true
+            },
+            {
+                name: '实际销售额',
+                type: 'line',
+                stack: 'Total',
+                data: data.year[1],
+                smooth: true
+            },
 
-    // // 点击切换年月日
-    // var timeTab = document.getElementsByClassName('timeTab');
-    // var index_ = 0;
-    // var timer = null;//计时器
-    // for (var i = 0; i < timeTab.length; i++) {
-    //     timeTab[i].setAttribute('index', i);
+        ]
+    };
+    my.setOption(option)
 
-    //     timeTab[i].onclick = function () {
-    //         index_ = this.getAttribute('index');
+    // 点击切换
+    var time = document.querySelectorAll('.time')
+    var index = 0
+    var timer = null;
+    console.log(time);
+    for (var i = 0; i < time.length; i++) {
+        time[i].setAttribute('index', i)
+        time[i].onclick = function () {
+            index = this.getAttribute('index')
+            for (var j = 0; j < time.length; j++) {
+                time[j].classList.remove('bg')
+                time[index].classList.add('bg')
+            }
+            // 获取自定义的内容
+            var datad = this.getAttribute('data-time')
+            option.series[0].data = data[datad][0];
+            option.series[1].data = data[datad][1];
+            my.setOption(option);
+        }
+    }
+    function show() {
+        timer = setInterval(function () {
+            index++;
+            if (index >= time.length) {
+                index = 0;
+            }
+            time[index].click();
+        }, 1500);
 
-    //         for (var j = 0; j < timeTab.length; j++) {
-    //             timeTab[j].classList.remove('active');
-    //             timeTab[index_].classList.add('active');
-    //         }
+    }
+    show();
 
-    //         // 获取自定义属性携带的时间
+    window.addEventListener('load', function () {
+        my.resize();
+    })
 
-    //         var dataTime = this.getAttribute('data-time');
-    //         // console.log(typeof dataTime);
-    //         // console.log(data[dataTime][0]);
-    //         // console.log(data[dataTime][1]);
+    window.addEventListener('resize', function () {
+        my.resize();
+    })
 
-    //         option.series[0].data = data[dataTime][0];
-    //         option.series[1].data = data[dataTime][1];
-
-    //         //修改option数据后 要重新配置option
-    //         myChart.setOption(option);
-
-    //     }
-    // }
-
-    // function auto() {
-    //     timer = setInterval(function () {
-    //         index_++;
-    //         if (index_ >= timeTab.length) {
-    //             index_ = 0;
-    //         }
-
-    //         timeTab[index_].click();
-    //     }, 1000);
-    // }
-    // auto();
-
-    // 鼠标移入暂停 移出继续
-
-    var sales = document.querySelector('.sales');
-    sales.onmouseenter = function () {
+    var xs = document.querySelector('.xs');
+    xs.onmouseenter = function () {
         clearInterval(timer);
     }
-
-    sales.onmouseleave = function () {
-        auto();
+    xs.onmouseleave = function () {
+        show(), 1500;
     }
+})();
 
+// 雷达图
+(function () {
+    var myChart = echarts.init(document.querySelector('.ld'));
+    var option = {
+        radar: {
+            indicator: [
+                { name: '超市', max: 100 },
+                { name: '便利店', max: 100 },
+                { name: '酒店', max: 100 },
+                { name: '饭店', max: 100 },
+                { name: '杨国福', max: 100 }
+            ],
+            radius: '50%',
+            splitNumber: 4,
+            shape: 'circle',
+            axisName: {
+                color: 'rgb(0,24,110)'
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255, 255, 255, 0.5)'
+                }
+            },
+            splitArea: {
+                show: false
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255, 255, 255, 0.5)'
+                }
+            }
+        },
+        tooltip: {
+            show: true,
+            position: ['60%', '0%'],
+            backgroundColor: 'rgba(255, 255, 255, 0.3)'
+        },
+        series: [
+            {
+                name: '郑州',
+                type: 'radar',
+                lineStyle: {
+                    normal: {
+                        color: '#fff',
+                    }
+                },
+                data: [[45, 88, 66, 33, 78]],
+                symbol: 'circle',
+                symbolSize: 5,
+                itemStyle: {
+                    color: '#fff'
+                },
+                label: {
+                    show: true,
+                    color: '#fff',
+                    fontSize: 10
+                },
+                areaStyle: {
+                    color: 'rgba(238, 197, 102, 0.6)',
+                },
+
+
+            }
+        ]
+    };
+
+    myChart.setOption(option);
 
     window.addEventListener('load', function () {
         myChart.resize();
     })
-
     window.addEventListener('resize', function () {
         myChart.resize();
     })
 })();
-

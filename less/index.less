@@ -52,7 +52,7 @@ body {
 
                 h3 {
                     font-size: .3rem;
-                    font-weight: 600;
+                    font-weight: 100;
                 }
 
                 ul {
@@ -283,7 +283,7 @@ body {
 
             /*销售额*/
             .xs {
-                height: 4rem;
+                height: 3rem;
 
                 h3 {
                     display: flex;
@@ -310,6 +310,8 @@ body {
 
                         .bg {
                             color: white;
+                            font-weight: 400;
+                            border-radius: .025rem;
                             background-color: rgb(76, 155, 253);
                         }
                     }
@@ -317,12 +319,100 @@ body {
 
                 .zx {
                     position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 3rem;
 
                     .dw {
                         position: absolute;
                         font-size: .2rem;
-                        color: white;
+                        color: #4c9bfd;
+                        left: .4rem;
+                        top: 2%;
                     }
+
+                    .tu {
+                        width: 100%;
+                        height: 2rem;
+                    }
+                }
+            }
+
+            /*雷达与进度*/
+            .ll {
+                display: flex;
+                height: 3.6rem;
+                justify-content: space-between;
+
+                .zb {
+                    width: 54%;
+
+                    .ld {
+                        height: 2.8rem;
+                    }
+                }
+
+                .yb {
+                    width: 44%;
+
+                    h2 {
+                        font-size: .5rem;
+                        font-weight: 400;
+                        color: white;
+                        margin-top: .25rem;
+                        padding: .35rem 0;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-size: .4rem;
+                        color: white;
+
+                        span {
+                            margin-right: .125rem;
+                        }
+
+                        &:nth-of-type(2) {
+                            padding: .125rem 0;
+                            display: flex;
+
+                            a {
+                                width: 50%;
+                                font-size: .2rem;
+                                color: rgb(76, 253, 226);
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+
+                                span {
+                                    width: .05rem;
+                                    height: .125rem;
+                                    display: inline-block;
+                                    background-color: red;
+                                }
+
+                                &:nth-of-type(2) {
+                                    span {
+                                        background-color: aqua;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .di {
+                height: 3.9rem;
+
+                .water {
+                    height: 3rem;
+                }
+
+                .right {
+                    height: 2.9rem;
+                    width: 30%;
                 }
             }
         }

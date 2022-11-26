@@ -245,6 +245,7 @@
         <!-- 右边 -->
         <div class="main">
             <div class="m_l">
+                <!-- 订单量 -->
                 <div class="pre l_a">
                     <div class="con">
                         <h3>
@@ -295,15 +296,16 @@
                         </div>
                     </div>
                 </div>
+                <!-- 销售额统计 -->
                 <div class="pre xs">
                     <div class="con">
                         <h3>
                             <span>销售额统计</span>
                             <div class="tm">
-                                <a href="javascript:;" class="time bg">年</a>
-                                <a href="javascript:;" class="time">月</a>
-                                <a href="javascript:;" class="time">日</a>
-                                <a href="javascript:;" class="time">周</a>
+                                <a href="javascript:;" data-time="year" class="time bg">年</a>
+                                <a href="javascript:;" data-time="quarter" class="time">月</a>
+                                <a href="javascript:;" data-time="month" class="time">日</a>
+                                <a href="javascript:;" data-time="week" class="time">周</a>
                             </div>
                         </h3>
                         <!-- 折线图 -->
@@ -313,16 +315,47 @@
                         </div>
                     </div>
                 </div>
+                <!-- 渠道分布 -->
                 <div class="ll">
-                    <div class="pre">
-                        <div class="con"></div>
+                    <div class="pre zb">
+                        <div class="con">
+                            <h3>渠道分布</h3>
+                            <div class="ld"></div>
+                        </div>
                     </div>
-                    <div class="pre">
-                        <div class="con"></div>
+                    <div class="pre yb">
+                        <div class="con">
+                            <h3>一季度销售进度</h3>
+                            <h2>75%</h2>
+                            <p><span>1,321</span><span>150%</span></p>
+                            <p>
+                                <a><span></span>销售额(万)</a>
+                                <a><span></span>同比增长</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="pre">
-                    <div class="con"></div>
+                <!-- 完成进度 -->
+                <div class="pre f_b di">
+                    <div class="con">
+                        <h3>完成进度统计</h3>
+                        <div class="fb">
+                            <div class="left water"></div>
+                            <div class="right bu">
+                                <ul id="cd">
+                                    <li>
+                                        <p>800,0万</p>
+                                        <p><span></span>计划收入</p>
+                                    </li>
+                                    <li>
+                                        <p>544,0万</p>
+                                        <p><span class="p_s"></span>完成收入</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -333,4 +366,6 @@
 <script src="./js/echarts.min.js"></script>
 <script src="./js/china.js"></script>
 <script src="./js/map.js"></script>
+<script src="./js/echarts-liquidfill.min.js"></script>
+<script src="./js/water.js"></script>
 <script src="./js/index.js"></script>
